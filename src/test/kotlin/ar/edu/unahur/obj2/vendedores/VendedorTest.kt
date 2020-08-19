@@ -37,7 +37,7 @@ class VendedorTest : DescribeSpec({
       it("una ciudad que no pertenece a una provincia habilitada") {
         viajante.puedeTrabajarEn(villaDolores).shouldBeFalse()
       }
-      it("Es influyente"){
+      it("Es  influyente"){
         viajante.esInfluyente().shouldBeFalse()
       }
     }
