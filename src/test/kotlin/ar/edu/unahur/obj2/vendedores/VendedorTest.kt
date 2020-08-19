@@ -19,11 +19,14 @@ class VendedorTest : DescribeSpec({
       it("otra ciudad") {
         vendedorFijo.puedeTrabajarEn(sanIgnacio).shouldBeFalse()
       }
+      it("Es influyente"){
+        vendedorFijo.esInfluyente().shouldBeFalse()
+      }
     }
   }
 
   describe("Viajante") {
-    val cordoba = Provincia(2000000)
+    val cordoba = Provincia(11000000)
     val villaDolores = Ciudad(cordoba)
     val viajante = Viajante(listOf(misiones))
 
@@ -33,6 +36,9 @@ class VendedorTest : DescribeSpec({
       }
       it("una ciudad que no pertenece a una provincia habilitada") {
         viajante.puedeTrabajarEn(villaDolores).shouldBeFalse()
+      }
+      it("Es influyente"){
+        viajante.esInfluyente().shouldBeFalse()
       }
     }
   }
