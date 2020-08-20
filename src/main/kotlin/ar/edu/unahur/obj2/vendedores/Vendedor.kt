@@ -58,9 +58,6 @@ class ComercioCorresponsal(val ciudades: List<Ciudad>) : Vendedor() {
 
   override fun esInfluyente(): Boolean {
     return ciudades.size>4 || ciudades.map{c->c.provincia}.toSet().size >= 3
-
-
-
   }
 
 }
